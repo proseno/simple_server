@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href='../web/css/register.css' type='text/css' rel='stylesheet'/>
+</head>
+<body>
+    <div>
+        <form action="/" method="post">
+            <input type="submit" value="Home">
+        </form>
+    </div>
+    <div>
+        <form action="/save" method="post">
+            <input id="login" type="text" pattern="[A-Za-z0-9]+" required>
+            <label for="login">Login</label>
+            <br>
+            <input id="password" type="password" pattern="[A-Za-z0-9]+" minlength="8" required>
+            <label for="password">Password</label>
+            <br>
+            <input type="submit" value="Sign up">
+        </form>
+    </div>
+</body>
+</html>
