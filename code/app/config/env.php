@@ -5,7 +5,8 @@ return [
             'host' => 'mysql',
             'dbname' => 'deploy',
             'username' => 'root',
-            'password' => 'symfony'
+            'password' => 'symfony',
+            'port' => 3306
         ]
     ]
 ];

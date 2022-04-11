@@ -4,8 +4,6 @@ namespace Core;
 
 class Application
 {
-    private Request\Request $request;
-
     public function run()
     {
         $request = \Core\Request\Parser::getRequest();
@@ -17,7 +15,7 @@ class Application
             array_walk($path, fn(&$item) => $item = ucfirst($item));
             $path = implode("\\", $path);
         }
-        $path = "\\Action\\$path";
+        $path = "\\Controller\\$path";
         $result = \Core\Loader::loadClass($path, 'execute');
         if (!$result) {
             http_response_code(404);

@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="web/css/from-style.css">
 </head>
 <style>
     input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    input[type=password], select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -47,17 +38,13 @@
     }
 </style>
 <body>
-<form action="/" method="post">
-    <input type="submit" value="Home">
-</form>
-<form action="/check" method="post">
-    <input id="login" name="login" type="text">
-    <label for="login">Login</label>
-    <br>
-    <input id="password" name="password" type="password">
-    <label for="password">Password</label>
-    <br>
-    <input type="submit" value="Sign in">
-</form>
+<div>
+    <h1>You logged successfully</h1>
+</div>
+<div>
+    <form action="/" method="post">
+        <input type="submit" value="Home">
+    </form>
+</div>
 </body>
 </html>

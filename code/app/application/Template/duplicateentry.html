@@ -2,20 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Duplicate</title>
 </head>
+<body>
 <style>
     input[type=text], select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-
-    input[type=password], select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -46,18 +37,16 @@
         padding: 20px;
     }
 </style>
-<body>
+<h1>This login exists in the system</h1>
+<h2>Try another</h2>
 <form action="/" method="post">
     <input type="submit" value="Home">
 </form>
-<form action="/check" method="post">
-    <input id="login" name="login" type="text">
-    <label for="login">Login</label>
-    <br>
-    <input id="password" name="password" type="password">
-    <label for="password">Password</label>
-    <br>
-    <input type="submit" value="Sign in">
+<form action="/login" method="post">
+    <input id="login" type="submit" value="Login"/>
+</form>
+<form action="/register" method="post">
+    <input type="submit" value="Register"/>
 </form>
 </body>
 </html>

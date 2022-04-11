@@ -1,6 +1,6 @@
 <?php
 
-namespace Action;
+namespace Controller;
 
 class Login extends AbstractAction
 {

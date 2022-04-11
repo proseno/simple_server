@@ -3,8 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link href='../web/css/register.css' type='text/css' rel='stylesheet'/>
 </head>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=password], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+</style>
 <body>
     <div>
         <form action="/" method="post">
@@ -12,11 +53,11 @@
         </form>
     </div>
     <div>
-        <form action="/save" method="post">
-            <input id="login" type="text" pattern="[A-Za-z0-9]+" required>
+        <form action="save/" method="post">
+            <input id="login" name="login" type="text" pattern="[A-Za-z0-9]+" required>
             <label for="login">Login</label>
             <br>
-            <input id="password" type="password" pattern="[A-Za-z0-9]+" minlength="8" required>
+            <input id="password" name="password" type="password" pattern="[A-Za-z0-9]+" minlength="8" required>
             <label for="password">Password</label>
             <br>
             <input type="submit" value="Sign up">

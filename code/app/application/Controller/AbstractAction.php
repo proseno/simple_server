@@ -1,6 +1,6 @@
 <?php
 
-namespace Action;
+namespace Controller;
 
 abstract class AbstractAction implements ActionInterface
 {
