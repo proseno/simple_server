@@ -3,25 +3,29 @@
 namespace Controller;
 
 use Core\Connection\Connection;
+use Core\DB\Mysql;
+use Core\Request\Parser;
+use PDOException;
 
 class Save extends AbstractAction
 {
-    private \Core\DB\Mysql $mysql;
+    private Mysql $mysql;
     protected string $template = 'SuccessRegister';
 
     public function __construct(
     ) {
-        $this->mysql = new \Core\DB\Mysql(new Connection());
+        $this->mysql = new Mysql(new Connection());
     }
 
-    public function execute(): ?string
+    public function execute(): ?bool
     {
-        $postParams = \Core\Request\Parser::getRequest()->getPostParams();
+        $postParams = Parser::getRequest()->getPostParams();
         try {
             $result = $this->mysql->insert('user', $postParams);
-        } catch (\PDOException) {
+        } catch (PDOException) {
             $this->template = 'DuplicateEntry';
         }
-        return parent::execute();
+        parent::execute();
+        return true;
     }
 }

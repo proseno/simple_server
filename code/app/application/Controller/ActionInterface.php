@@ -4,5 +4,5 @@ namespace Controller;
 
 interface ActionInterface
 {
-    public function execute(): ?string;
+    public function execute(): ?bool;
 }

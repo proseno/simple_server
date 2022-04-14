@@ -6,7 +6,7 @@ abstract class AbstractAction implements ActionInterface
 {
     protected string $template;
 
-    public function execute(): ?string
+    public function execute(): ?bool
     {
         if (!isset($this->template)) {
             $templateClass = explode('\\', get_class($this));
@@ -15,6 +15,7 @@ abstract class AbstractAction implements ActionInterface
         } else {
             $templateClass = $this->template;
         }
-        return \Core\Loader::loadClass("\\Model\\$templateClass", "render");
+        \Core\Loader::loadClass("\\Model\\$templateClass", "render");
+        return true;
     }
 }
